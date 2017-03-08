@@ -5,14 +5,12 @@ import java.awt.*;
 import java.sql.*;
 import java.util.*;
 
-public class Database {
-    private String dbName;
+class Database {
+    private String dbName = "ser322";
     private final String user = "root";
     private final String passwrd = "gt46u7";
-    private static ArrayList<String> tables;
 
-    public Database(String dbName) {
-        this.dbName = dbName;
+    Database() {
         try {
             getConnection();
         } catch (Exception e) {
@@ -60,8 +58,5 @@ public class Database {
         }
     }
 
-
-
-    public ArrayList<String> getTables() {return tables;}
-    public String getDbName() { return dbName; }
+    String getDbName() { return dbName; }
 }

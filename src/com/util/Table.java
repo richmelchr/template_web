@@ -11,9 +11,7 @@ public class Table extends Database {
     private static String tableName;
     private static ArrayList<String> fields;
 
-    public Table(String dbName) {
-        super(dbName);
-    }
+    public Table() {}
 
 //    public Table(String tableName) {
 //        Table.tableName = tableName;

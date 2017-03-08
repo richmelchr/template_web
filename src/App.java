@@ -1,27 +1,26 @@
 import com.entities.Album;
 import com.entities.Artist;
-import com.util.Database;
 import com.util.Table;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.*;
 import java.lang.Class;
-
-
 import java.util.ArrayList;
 
 public class App {
 
     public static void main(String[] args) {
 
-//        Album album = new Album();
 
 
-//        Table table = new Table();
+
+        Table table = new Table();
 
 //        Table.insert(album);
 
-        Database ser322 = new Database("ser322");
+
+
+        Album album = new Album();
 
 
 
