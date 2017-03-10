@@ -20,13 +20,11 @@ public class App {
 //        Table.insert(album);
 
 
-        Playlist playlist = new Playlist();
+        Playlist playlist = new Playlist(15, "hits");
 
-        playlist.createTable();
+//        playlist.dropTable();
 
-
-
-
+        playlist.insert();
 
 
 

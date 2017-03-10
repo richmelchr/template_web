@@ -5,8 +5,6 @@ import com.util.Table;
 public class Playlist extends Table {
     private int playlistID;
     private String playlistName;
-    private int testInt;
-    private String testString;
 
     public Playlist() {}
 

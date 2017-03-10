@@ -12,13 +12,6 @@ import java.util.Objects;
 
 public class Table extends Database {
 
-//    public Table(String tableName) {
-//        Table.tableName = tableName;
-//        String temp = "CREATE TABLE IF NOT EXISTS " +
-//                tableName + " (id int primary key unique auto_increment)";
-//        Database.pushToDB(tableName);
-//    }
-
     public boolean doesTableExist(String tableName) {
         Connection connection = getConnection();
         try { // does table already exist?
@@ -88,7 +81,6 @@ public class Table extends Database {
         return false;
     }
 
-
     public boolean addColumn(String tableName, String colName, boolean colInt, boolean colString) {
         Connection connection = getConnection();
         PreparedStatement preStat = null;
@@ -113,7 +105,6 @@ public class Table extends Database {
         }
     }
 
-
     public boolean dropTable() {
         Connection connection = getConnection();
         PreparedStatement preStat = null;
@@ -121,31 +112,68 @@ public class Table extends Database {
         String tableName = this.getClass().getSimpleName().toLowerCase();
 
         try {
-            preStat = connection.prepareStatement("DROP TABLE ?");
-            preStat.setString(1, tableName);
+            preStat = connection.prepareStatement("DROP TABLE " + tableName);
             return pushToDB(preStat);
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
-
     }
 
+    public boolean insert() {
+        Connection connection = getConnection();
+        PreparedStatement preStat = null;
+        String tableName = this.getClass().getSimpleName();
+        Field[] fields = this.getClass().getDeclaredFields();
+        StringBuilder columns = new StringBuilder();
+        StringBuilder values = new StringBuilder();
 
-    public static boolean insert(Object table) { // static means you can access this method without declaring new Table
-        String tableName = table.getClass().getSimpleName();
-        Field[] fields = table.getClass().getDeclaredFields();
+        columns.append(" (");
+        values.append(" (");
 
         for (Field aField : fields) {
-            System.out.println("--------------------------");
-            System.out.println(aField.getName());
-            System.out.println(aField.getGenericType());
-            System.out.println("---------------------------");
+            columns.append(aField.getName()).append(",");
+            values.append("?,");
+
+//            System.out.println(aField.getName());
+//            System.out.println(aField.getGenericType().getTypeName());
+
+        }
+
+        columns.deleteCharAt(columns.length() - 1);
+        values.deleteCharAt(values.length() - 1);
+        columns.append(")");
+        values.append(")");
+
+        System.out.println(columns.toString());
+        System.out.println(values.toString());
+
+        try {
+            preStat = connection.prepareStatement("INSERT INTO " + tableName + columns +
+                    " VALUES " + values + "");
+
+            for (int i=0; i < fields.length; ++i) {
+
+                if (Objects.equals("int", fields[i].getGenericType().getTypeName())) {
+                    System.out.println(fields[i].getGenericType().getTypeName());
+
+                    //do stuff
+                } else if (Objects.equals("java.lang.String", fields[i].getGenericType().getTypeName())) {
+                    System.out.println(fields[i].getGenericType().getTypeName());
+
+                    //do stuff
+                }
+
+
+            }
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
 
 
         return true;
-
     }
 
 
