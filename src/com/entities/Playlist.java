@@ -3,8 +3,8 @@ package com.entities;
 import com.util.Table;
 
 public class Playlist extends Table {
-    private int playlistID;
-    private String playlistName;
+    public int playlistID;
+    public String playlistName;
 
     public Playlist() {}
 

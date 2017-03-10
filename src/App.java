@@ -22,9 +22,11 @@ public class App {
 
         Playlist playlist = new Playlist(15, "hits");
 
+
+//        playlist.createTable();
 //        playlist.dropTable();
 
-        playlist.insert();
+//        playlist.insert();
 
 
 

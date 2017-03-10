@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8f618eb-fdc9-4ef5-a5c6-0ee459566829" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war/template_web_war.war" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war/template_web_war.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/App.class" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/com/util/Table.class" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/com/util/Table.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/template_web/App.class" afterPath="$PROJECT_DIR$/out/production/template_web/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/template_web/com/util/Table.class" afterPath="$PROJECT_DIR$/out/production/template_web/com/util/Table.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.java" afterPath="$PROJECT_DIR$/src/App.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entities/Playlist.java" afterPath="$PROJECT_DIR$/src/com/entities/Playlist.java" />
@@ -114,8 +119,8 @@
             <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/App.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="323">
-                    <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+                  <state relative-caret-position="417">
+                    <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -136,11 +141,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.4899764">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Database.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="918">
-                  <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+                  <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -151,8 +156,8 @@
           <file leaf-file-name="Playlist.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/entities/Playlist.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -196,11 +201,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AlbumDaoImpl.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="AlbumDaoImpl.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="54" column="12" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="55" selection-end-column="60" />
+                <state relative-caret-position="136">
+                  <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
@@ -221,18 +226,18 @@
           <file leaf-file-name="Table.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/util/Table.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="441">
-                  <caret line="163" column="30" lean-forward="false" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+                <state relative-caret-position="739">
+                  <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#doesTableExist#0;class#Table#0" expanded="false" />
                     <element signature="method#addColumn#0;class#Table#0" expanded="false" />
-                    <marker date="1489119769792" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
-                    <marker date="1489119769792" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
-                    <marker date="1489119769792" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
-                    <marker date="1489119769792" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
-                    <marker date="1489119769792" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
-                    <marker date="1489119769792" expanded="true" signature="5410:5477" ph="INSERT INTO missingValuemissingValue... " />
+                    <marker date="1489130303064" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
+                    <marker date="1489130303064" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
+                    <marker date="1489130303064" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
+                    <marker date="1489130303064" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
+                    <marker date="1489130303064" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
+                    <marker date="1489130303064" expanded="true" signature="5187:5253" ph="INSERT INTO missingValuemissingValue... " />
                   </folding>
                 </state>
               </provider>
@@ -271,8 +276,8 @@
         <option value="$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/com/util/Database.java" />
         <option value="$PROJECT_DIR$/src/com/entities/Playlist.java" />
-        <option value="$PROJECT_DIR$/src/App.java" />
         <option value="$PROJECT_DIR$/src/com/util/Table.java" />
+        <option value="$PROJECT_DIR$/src/App.java" />
       </list>
     </option>
   </component>
@@ -966,7 +971,7 @@
       <workItem from="1488921590272" duration="9074000" />
       <workItem from="1489001752532" duration="1184000" />
       <workItem from="1489018647523" duration="9199000" />
-      <workItem from="1489097751349" duration="17773000" />
+      <workItem from="1489097751349" duration="20860000" />
     </task>
     <task id="LOCAL-00001" summary="nightly commit">
       <created>1488959361495</created>
@@ -982,11 +987,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489111845265</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".insert() in progress. stringbuilder methods being developed">
+      <created>1489119802693</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1489119802693</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37230000" />
+    <option name="totallyTimeSpent" value="40317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -1001,7 +1013,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10021322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10021322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13965885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1014,7 +1026,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2211838" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16199377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08795309" sideWeight="0.49466667" order="0" side_tool="false" content_ui="combo" />
@@ -1075,7 +1087,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="nightly commit" />
     <MESSAGE value="createTable() finished, working, tested." />
-    <option name="LAST_COMMIT_MESSAGE" value="createTable() finished, working, tested." />
+    <MESSAGE value=".insert() in progress. stringbuilder methods being developed" />
+    <option name="LAST_COMMIT_MESSAGE" value=".insert() in progress. stringbuilder methods being developed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1152,12 +1165,12 @@
             <element signature="imports" expanded="true" />
             <element signature="method#doesTableExist#0;class#Table#0" expanded="false" />
             <element signature="method#addColumn#0;class#Table#0" expanded="false" />
-            <marker date="1489119769792" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
-            <marker date="1489119769792" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
-            <marker date="1489119769792" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
-            <marker date="1489119769792" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
-            <marker date="1489119769792" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
-            <marker date="1489119769792" expanded="true" signature="5410:5477" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489130303064" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
+            <marker date="1489130303064" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
+            <marker date="1489130303064" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
+            <marker date="1489130303064" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
+            <marker date="1489130303064" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
+            <marker date="1489130303064" expanded="true" signature="5187:5253" ph="INSERT INTO missingValuemissingValue... " />
           </folding>
         </state>
       </provider>
@@ -1230,12 +1243,12 @@
             <element signature="imports" expanded="true" />
             <element signature="method#doesTableExist#0;class#Table#0" expanded="false" />
             <element signature="method#addColumn#0;class#Table#0" expanded="false" />
-            <marker date="1489119769792" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
-            <marker date="1489119769792" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
-            <marker date="1489119769792" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
-            <marker date="1489119769792" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
-            <marker date="1489119769792" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
-            <marker date="1489119769792" expanded="true" signature="5410:5477" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489130303064" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
+            <marker date="1489130303064" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
+            <marker date="1489130303064" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
+            <marker date="1489130303064" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
+            <marker date="1489130303064" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
+            <marker date="1489130303064" expanded="true" signature="5187:5253" ph="INSERT INTO missingValuemissingValue... " />
           </folding>
         </state>
       </provider>
@@ -1258,12 +1271,12 @@
             <element signature="imports" expanded="true" />
             <element signature="method#doesTableExist#0;class#Table#0" expanded="false" />
             <element signature="method#addColumn#0;class#Table#0" expanded="false" />
-            <marker date="1489119769792" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
-            <marker date="1489119769792" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
-            <marker date="1489119769792" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
-            <marker date="1489119769792" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
-            <marker date="1489119769792" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
-            <marker date="1489119769792" expanded="true" signature="5410:5477" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489130303064" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
+            <marker date="1489130303064" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
+            <marker date="1489130303064" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
+            <marker date="1489130303064" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
+            <marker date="1489130303064" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
+            <marker date="1489130303064" expanded="true" signature="5187:5253" ph="INSERT INTO missingValuemissingValue... " />
           </folding>
         </state>
       </provider>
@@ -1359,16 +1372,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/entities/Album.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1379,26 +1382,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/entities/Playlist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="false" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="54" column="12" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="55" selection-end-column="60" />
+        <state relative-caret-position="136">
+          <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
@@ -1411,20 +1404,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="40" lean-forward="false" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.playlist">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/util/Table.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="163" column="30" lean-forward="false" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+        <state relative-caret-position="739">
+          <caret line="142" column="0" lean-forward="true" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doesTableExist#0;class#Table#0" expanded="false" />
             <element signature="method#addColumn#0;class#Table#0" expanded="false" />
-            <marker date="1489119769792" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
-            <marker date="1489119769792" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
-            <marker date="1489119769792" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
-            <marker date="1489119769792" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
-            <marker date="1489119769792" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
-            <marker date="1489119769792" expanded="true" signature="5410:5477" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489130303064" expanded="true" signature="1496:1604" ph="CREATE TABLE... IF" />
+            <marker date="1489130303064" expanded="true" signature="1759:1871" ph="CREATE TABLE... IF" />
+            <marker date="1489130303064" expanded="true" signature="3392:3480" ph="ALTER TABLE missingValue... " />
+            <marker date="1489130303064" expanded="true" signature="3575:3667" ph="ALTER TABLE missingValue... " />
+            <marker date="1489130303064" expanded="true" signature="4240:4251" ph="DROP TABLE m... " />
+            <marker date="1489130303064" expanded="true" signature="5187:5253" ph="INSERT INTO missingValuemissingValue... " />
           </folding>
         </state>
       </provider>

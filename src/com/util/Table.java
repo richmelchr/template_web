@@ -134,10 +134,6 @@ public class Table extends Database {
         for (Field aField : fields) {
             columns.append(aField.getName()).append(",");
             values.append("?,");
-
-//            System.out.println(aField.getName());
-//            System.out.println(aField.getGenericType().getTypeName());
-
         }
 
         columns.deleteCharAt(columns.length() - 1);
@@ -145,36 +141,26 @@ public class Table extends Database {
         columns.append(")");
         values.append(")");
 
-        System.out.println(columns.toString());
-        System.out.println(values.toString());
-
         try {
             preStat = connection.prepareStatement("INSERT INTO " + tableName + columns +
-                    " VALUES " + values + "");
-
+                    " VALUES" + values + "");
             for (int i=0; i < fields.length; ++i) {
-
+                Table Obj = this;
                 if (Objects.equals("int", fields[i].getGenericType().getTypeName())) {
-                    System.out.println(fields[i].getGenericType().getTypeName());
-
-                    //do stuff
+                    preStat.setInt(i + 1, (Integer) fields[i].get(Obj));
                 } else if (Objects.equals("java.lang.String", fields[i].getGenericType().getTypeName())) {
-                    System.out.println(fields[i].getGenericType().getTypeName());
-
-                    //do stuff
+                    preStat.setString(i + 1, (String) fields[i].get(Obj));
+                } else {
+                    System.out.println("Column type of variable not found");
+                    return false;
                 }
-
-
             }
+            pushToDB(preStat);
 
-
-        } catch (SQLException e) {
+        } catch (SQLException | IllegalAccessException e) {
             e.printStackTrace();
         }
-
-
         return true;
     }
-
 
 }
