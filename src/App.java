@@ -1,5 +1,6 @@
 import com.entities.Album;
 import com.entities.Artist;
+import com.entities.Playlist;
 import com.util.Table;
 
 import java.lang.reflect.Field;
@@ -19,8 +20,14 @@ public class App {
 //        Table.insert(album);
 
 
+        Playlist playlist = new Playlist();
 
-        Album album = new Album();
+        playlist.createTable();
+
+
+
+
+
 
 
 

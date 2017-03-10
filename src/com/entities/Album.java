@@ -1,6 +1,8 @@
 package com.entities;
 
-public class Album {
+import com.util.Table;
+
+public class Album extends Table {
     private int albumID;
     private String albumName;
     private int yearRel;

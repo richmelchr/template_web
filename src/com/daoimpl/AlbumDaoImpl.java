@@ -3,7 +3,6 @@ package com.daoimpl;
 
 import com.dao.AlbumDao;
 import com.entities.Album;
-import com.util.Database;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -19,7 +18,8 @@ public class AlbumDaoImpl implements AlbumDao {
         try {
 //            connection = Database.getConnection();
             statement = connection.createStatement();
-            statement.execute("CREATE TABLE IF NOT EXISTS album (albumID int primary key unique auto_increment," +
+            statement.execute("CREATE TABLE IF NOT EXISTS album " +
+                    "(albumID int primary key unique auto_increment," +
                     "albumName varchar(55), yearRel int)");
 
         } catch (Exception e) {
