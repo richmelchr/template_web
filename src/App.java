@@ -30,6 +30,8 @@ public class App {
 
 
 
+
+
 //        PersonDaoImpl pdi = new PersonDaoImpl();
 //        WriterDaoImpl writer = new WriterDaoImpl();
 //        SongDaoImpl song = new SongDaoImpl();

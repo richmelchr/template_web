@@ -161,8 +161,23 @@ public class Table extends Database {
         return true;
     }
 
-//    public boolean delete(int id) {
-//
-//    }
+    public boolean delete(int playlistID) {
+        Connection connection = getConnection();
+        PreparedStatement preStat = null;
+        String tableName = this.getClass().getSimpleName();
+
+        try {
+            preStat = connection.prepareStatement("DELETE FROM " +
+                    tableName + " WHERE " + tableName + "ID" + " = ?");
+            preStat.setInt(1, playlistID);
+            return pushToDB(preStat);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
 
 }
