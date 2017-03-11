@@ -1,13 +1,6 @@
-import com.daoimpl.AlbumDaoImpl;
-import com.daoimpl.ArtistDaoImpl;
-import com.daoimpl.WriterDaoImpl;
-import com.daoimpl.SongDaoImpl;
-import com.entities.Album;
-import com.entities.Artist;
-import com.entities.Song;
-import com.entities.Writer;
-
-import com.util.Database;
+import com.daoimpl.*;
+import com.entities.*;
+import com.util.Table;
 import java.sql.*;
 import java.util.ArrayList;
 

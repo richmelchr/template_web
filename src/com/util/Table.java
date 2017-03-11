@@ -27,14 +27,15 @@ public class Table extends Database {
     }
 
     public boolean createTable() {
-        Connection connection = getConnection();
-        PreparedStatement preStat = null;
-
         String fieldName, fieldType, tableName = this.getClass().getSimpleName().toLowerCase();
-        boolean worked, error = true;
-        Field[] fields = this.getClass().getDeclaredFields();
 
         if (!doesTableExist(tableName)) {
+            Connection connection = getConnection();
+            PreparedStatement preStat = null;
+
+            boolean worked, error = true;
+            Field[] fields = this.getClass().getDeclaredFields();
+
 
             for (int i = 0; i < fields.length; i++) {
                 fieldName = fields[i].getName();
@@ -42,26 +43,19 @@ public class Table extends Database {
 
                 if (i == 0) { // Create Table with first Column
                     try {
-                        if (Objects.equals(fieldType, "int")) { // if type of field is Int
-                            preStat = connection.prepareStatement("CREATE TABLE IF NOT EXISTS " +
-                                    tableName + " (" + fieldName + " INT(11))");
-                        } else if (Objects.equals(fieldType, "java.lang.String")) {
-                            preStat = connection.prepareStatement("CREATE TABLE IF NOT EXISTS " +
-                                    tableName + " (" + fieldName + " VARCHAR(55))");
-                        } else {
-                            System.out.println("Column type of variable not found");
-                            return false;
-                        }
-
-                        pushToDB(preStat);
+                        preStat = connection.prepareStatement("CREATE TABLE IF NOT EXISTS " +
+                                tableName + " (" + tableName + "ID" +
+                                " INT PRIMARY KEY UNIQUE auto_increment)");
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
+                    pushToDB(preStat);
+
                 } else { // Add all additional Column's
                     if (Objects.equals(fieldType, "int")) {
-                        worked = addColumn(tableName, fieldName, true, false);
+                        worked = addColumn(fieldName, true, false);
                     } else if (Objects.equals(fieldType, "java.lang.String")) {
-                        worked = addColumn(tableName, fieldName, false, true);
+                        worked = addColumn(fieldName, false, true);
                     } else {
                         worked = false;
                         System.out.println("Not all Column's added");
@@ -81,9 +75,10 @@ public class Table extends Database {
         return false;
     }
 
-    public boolean addColumn(String tableName, String colName, boolean colInt, boolean colString) {
+    public boolean addColumn(String colName, boolean colInt, boolean colString) {
         Connection connection = getConnection();
         PreparedStatement preStat = null;
+        String tableName = this.getClass().getSimpleName(); // return name of table
 
         try {
             if (colInt) {
@@ -138,29 +133,36 @@ public class Table extends Database {
 
         columns.deleteCharAt(columns.length() - 1);
         values.deleteCharAt(values.length() - 1);
-        columns.append(")");
-        values.append(")");
+        columns.append(")"); // result (firstValue,secondValue,thirdValue)
+        values.append(")"); // result: (?,?,?)
 
         try {
-            preStat = connection.prepareStatement("INSERT INTO " + tableName + columns +
-                    " VALUES" + values + "");
-            for (int i=0; i < fields.length; ++i) {
-                Table Obj = this;
-                if (Objects.equals("int", fields[i].getGenericType().getTypeName())) {
-                    preStat.setInt(i + 1, (Integer) fields[i].get(Obj));
-                } else if (Objects.equals("java.lang.String", fields[i].getGenericType().getTypeName())) {
-                    preStat.setString(i + 1, (String) fields[i].get(Obj));
+            preStat = connection.prepareStatement("INSERT INTO " +
+                    tableName + columns + " VALUES" + values + ""); // build preStat statement
+            for (int i = 0; i < fields.length; ++i) {
+                Table Obj = this; // get instance of Object
+                if (Objects.equals("int", fields[i].getGenericType().getTypeName())) { // if Object field is type int
+                    preStat.setInt(i + 1, (Integer) fields[i].get(Obj)); //get Object field value
+                } else if (Objects.equals("java.lang.String", fields[i].getGenericType().getTypeName())) { // if Object field is type String
+                    preStat.setString(i + 1, (String) fields[i].get(Obj)); //get Object field value
                 } else {
+                    // operation only works with integers and Strings. if more types
+                    // are required, add additional 'else if' statements to check
+                    // for types in the Object
                     System.out.println("Column type of variable not found");
                     return false;
                 }
             }
-            pushToDB(preStat);
+            pushToDB(preStat); // push preparedStatement to SQL Database Table
 
         } catch (SQLException | IllegalAccessException e) {
             e.printStackTrace();
         }
         return true;
     }
+
+//    public boolean delete(int id) {
+//
+//    }
 
 }

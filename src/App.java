@@ -24,13 +24,8 @@ public class App {
 
 
 //        playlist.createTable();
-//        playlist.dropTable();
 
 //        playlist.insert();
-
-
-
-
 
 
 
