@@ -21,15 +21,19 @@ public class App {
 
 
         Playlist playlist = new Playlist(15, "hits");
-
-
+        Album album = new Album();
+        Artist artist = new Artist();
 //        playlist.createTable();
 
 //        playlist.insert();
 
+//        playlist.update(3);
 
+//        System.out.println(album.getPrimaryKey());
 
+        Playlist playlist1 = new Playlist(2, "more hits");
 
+        playlist1.update(6);
 
 
 //        PersonDaoImpl pdi = new PersonDaoImpl();

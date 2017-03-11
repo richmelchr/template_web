@@ -4,13 +4,12 @@
     <list default="true" id="d8f618eb-fdc9-4ef5-a5c6-0ee459566829" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war/template_web_war.war" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war/template_web_war.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/App.class" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/Servlet.class" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/Servlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/com/util/Table.class" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/com/util/Table.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/template_web/App.class" afterPath="$PROJECT_DIR$/out/production/template_web/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/template_web/Servlet.class" afterPath="$PROJECT_DIR$/out/production/template_web/Servlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/template_web/com/util/Table.class" afterPath="$PROJECT_DIR$/out/production/template_web/com/util/Table.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.java" afterPath="$PROJECT_DIR$/src/App.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/entities/Artist.java" afterPath="$PROJECT_DIR$/src/com/entities/Artist.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/util/Table.java" afterPath="$PROJECT_DIR$/src/com/util/Table.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -116,12 +115,12 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <leaf>
             <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/App.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="383">
-                    <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <state relative-caret-position="459">
+                    <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -129,12 +128,14 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="Playlist.java" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/src/com/entities/Playlist.java">
+            <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="374">
-                    <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-                    <folding />
+                  <state relative-caret-position="350">
+                    <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="38" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -149,28 +150,15 @@
     <favorites_list name="template_web" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4702345">
+    <splitter split-orientation="horizontal" split-proportion="0.4169034">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="314">
-                  <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="Servlet.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Servlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
+                <state relative-caret-position="-408">
                   <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
                   <folding>
-                    <element signature="e#4355#4363#0" expanded="true" />
                     <marker date="1489188084319" expanded="true" signature="4734:4770" ph="SELECT * FRO... song" />
                     <marker date="1489188084319" expanded="true" signature="5291:5328" ph="SELECT * FRO... album" />
                     <marker date="1489188084319" expanded="true" signature="5860:5907" ph="SELECT * FRO... artist" />
@@ -197,7 +185,9 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="68">
                   <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-                  <folding />
+                  <folding>
+                    <element signature="imports" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -205,10 +195,14 @@
           <file leaf-file-name="AlbumDaoImpl.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="212">
-                  <caret line="183" column="88" lean-forward="true" selection-start-line="183" selection-start-column="88" selection-end-line="183" selection-end-column="88" />
+                <state relative-caret-position="927">
+                  <caret line="209" column="13" lean-forward="false" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="method#createAlbumTable#0;class#AlbumDaoImpl#0" expanded="false" />
+                    <element signature="method#insert#0;class#AlbumDaoImpl#0" expanded="false" />
+                    <element signature="method#selectAll#0;class#AlbumDaoImpl#0" expanded="false" />
+                    <element signature="method#delete#0;class#AlbumDaoImpl#0" expanded="false" />
                     <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
                     <marker date="1489031414971" expanded="true" signature="1448:1523" ph="INSERT INTO album... " />
                     <marker date="1489031414971" expanded="true" signature="2660:2697" ph="SELECT * FRO... album" />
@@ -227,8 +221,8 @@
           <file leaf-file-name="Table.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/util/Table.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="180" column="4" lean-forward="true" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
+                <state relative-caret-position="663">
+                  <caret line="245" column="5" lean-forward="true" selection-start-line="245" selection-start-column="5" selection-end-line="245" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#doesTableExist#0;class#Table#0" expanded="false" />
@@ -237,16 +231,25 @@
                     <element signature="method#dropTable#0;class#Table#0" expanded="false" />
                     <element signature="method#insert#0;class#Table#0" expanded="false" />
                     <element signature="method#delete#0;class#Table#0" expanded="false" />
-                    <marker date="1489196808618" expanded="true" signature="1418:1591" ph="CREATE TABLE... IF" />
-                    <marker date="1489196808618" expanded="true" signature="2966:3054" ph="ALTER TABLE missingValue... " />
-                    <marker date="1489196808618" expanded="true" signature="3149:3241" ph="ALTER TABLE missingValue... " />
-                    <marker date="1489196808618" expanded="true" signature="3814:3825" ph="DROP TABLE m... " />
-                    <marker date="1489196808618" expanded="true" signature="4826:4892" ph="INSERT INTO missingValuemissingValue... " />
-                    <marker date="1489196808618" expanded="true" signature="6362:6374" ph="DELETE FROM " />
-                    <marker date="1489196808618" expanded="true" signature="6362:6417" ph="DELETE FROM " />
-                    <marker date="1489196808618" expanded="true" signature="6362:6418" ph="DELETE FROM " />
-                    <marker date="1489196808618" expanded="true" signature="6362:6437" ph="DELETE FROM " />
-                    <marker date="1489196808618" expanded="true" signature="6362:6446" ph="DELETE FROM " />
+                    <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
+                    <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
+                    <marker date="1489274660353" expanded="true" signature="1417:1590" ph="CREATE TABLE... IF" />
+                    <marker date="1489274660353" expanded="true" signature="2979:3067" ph="ALTER TABLE missingValue... " />
+                    <marker date="1489274660353" expanded="true" signature="3162:3254" ph="ALTER TABLE missingValue... " />
+                    <marker date="1489274660353" expanded="true" signature="3827:3838" ph="DROP TABLE m... " />
+                    <marker date="1489274660353" expanded="true" signature="5015:5081" ph="INSERT INTO missingValuemissingValue... " />
+                    <marker date="1489274660353" expanded="true" signature="5623:5635" ph="DELETE FROM " />
+                    <marker date="1489274660353" expanded="true" signature="5623:5678" ph="DELETE FROM " />
+                    <marker date="1489274660353" expanded="true" signature="5623:5679" ph="DELETE FROM " />
+                    <marker date="1489274660353" expanded="true" signature="5623:5698" ph="DELETE FROM " />
+                    <marker date="1489274660353" expanded="true" signature="5623:5707" ph="DELETE FROM " />
+                    <marker date="1489274660353" expanded="true" signature="6616:6623" ph="UPDATE missi... " />
+                    <marker date="1489274660353" expanded="true" signature="6616:6664" ph="UPDATE missi... " />
+                    <marker date="1489274660353" expanded="true" signature="6616:6665" ph="UPDATE missi... " />
+                    <marker date="1489274660353" expanded="true" signature="6616:6669" ph="UPDATE missi... " />
+                    <marker date="1489274660353" expanded="true" signature="6616:6686" ph="UPDATE missi... " />
+                    <marker date="1489274660353" expanded="true" signature="6616:6687" ph="UPDATE missi... " />
+                    <marker date="1489274660353" expanded="true" signature="6616:6703" ph="UPDATE missi... " />
                   </folding>
                 </state>
               </provider>
@@ -283,6 +286,7 @@
       <find>toS</find>
       <find>toString()</find>
       <find>toString</find>
+      <find>play</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -301,6 +305,7 @@
         <option value="$PROJECT_DIR$/src/com/util/Database.java" />
         <option value="$PROJECT_DIR$/src/Servlet.java" />
         <option value="$PROJECT_DIR$/src/com/entities/Playlist.java" />
+        <option value="$PROJECT_DIR$/src/com/entities/Artist.java" />
         <option value="$PROJECT_DIR$/src/App.java" />
         <option value="$PROJECT_DIR$/src/com/util/Table.java" />
       </list>
@@ -346,9 +351,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -465,6 +467,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -997,7 +1002,8 @@
       <workItem from="1489001752532" duration="1184000" />
       <workItem from="1489018647523" duration="9199000" />
       <workItem from="1489097751349" duration="21087000" />
-      <workItem from="1489167709828" duration="22529000" />
+      <workItem from="1489167709828" duration="24711000" />
+      <workItem from="1489268169199" duration="6256000" />
     </task>
     <task id="LOCAL-00001" summary="nightly commit">
       <created>1488959361495</created>
@@ -1034,11 +1040,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489195616995</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=".delete(int playlistID) tested, working, finished">
+      <created>1489196867741</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1489196867741</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63073000" />
+    <option name="totallyTimeSpent" value="71511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -1047,32 +1060,32 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11353944" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13859275" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13965885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16199377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06876332" sideWeight="0.49466667" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08795309" sideWeight="0.5053333" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15991692" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1108742" sideWeight="0.49466667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08795309" sideWeight="0.5053333" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1080,43 +1093,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07622601" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13965885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997923" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16199377" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06876332" sideWeight="0.49466667" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08795309" sideWeight="0.5053333" order="8" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1130,10 +1106,13 @@
     <MESSAGE value=".insert() in progress. stringbuilder methods being developed" />
     <MESSAGE value=".insert() actually works. tested, values inserted. needs more testing." />
     <MESSAGE value=".createTable() added unique ID." />
-    <option name="LAST_COMMIT_MESSAGE" value=".createTable() added unique ID." />
+    <MESSAGE value=".delete(int playlistID) tested, working, finished" />
+    <option name="LAST_COMMIT_MESSAGE" value=".delete(int playlistID) tested, working, finished" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1141,6 +1120,117 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Servlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <marker date="1489188084319" expanded="true" signature="4734:4770" ph="SELECT * FRO... song" />
+            <marker date="1489188084319" expanded="true" signature="5291:5328" ph="SELECT * FRO... album" />
+            <marker date="1489188084319" expanded="true" signature="5860:5907" ph="SELECT * FRO... artist" />
+            <marker date="1489188084319" expanded="true" signature="6481:6555" ph="SELECT * FRO... song" />
+            <marker date="1489188084319" expanded="true" signature="7166:7285" ph="SELECT * FRO... song" />
+            <marker date="1489188084319" expanded="true" signature="7203:7264" ph="SELECT album... song" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/entities/Album.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/AlbumDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2006">
+          <caret line="209" column="13" lean-forward="true" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createAlbumTable#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#insert#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#selectAll#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#delete#0;class#AlbumDaoImpl#0" expanded="false" />
+            <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
+            <marker date="1489031414971" expanded="true" signature="1448:1523" ph="INSERT INTO album... " />
+            <marker date="1489031414971" expanded="true" signature="2660:2697" ph="SELECT * FRO... album" />
+            <marker date="1489031414971" expanded="true" signature="4229:4248" ph="SELECT * FRO... album" />
+            <marker date="1489031414971" expanded="true" signature="5622:5657" ph="DELETE FROM " />
+            <marker date="1489031414971" expanded="true" signature="6663:6749" ph="UPDATE album... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/util/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doesTableExist#0;class#Table#0" expanded="false" />
+            <element signature="method#createTable#0;class#Table#0" expanded="false" />
+            <element signature="method#addColumn#0;class#Table#0" expanded="false" />
+            <element signature="method#dropTable#0;class#Table#0" expanded="false" />
+            <element signature="method#insert#0;class#Table#0" expanded="false" />
+            <element signature="method#delete#0;class#Table#0" expanded="false" />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
+            <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
+            <marker date="1489274660353" expanded="true" signature="1417:1590" ph="CREATE TABLE... IF" />
+            <marker date="1489274660353" expanded="true" signature="2979:3067" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3162:3254" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3827:3838" ph="DROP TABLE m... " />
+            <marker date="1489274660353" expanded="true" signature="5015:5081" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489274660353" expanded="true" signature="5623:5635" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5678" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5679" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5698" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5707" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="6616:6623" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6664" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6665" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6669" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6686" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6687" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6703" ph="UPDATE missi... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.playlist">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -1164,7 +1254,6 @@
         <state relative-caret-position="1751">
           <caret line="124" column="31" lean-forward="false" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
           <folding>
-            <element signature="e#4355#4363#0" expanded="true" />
             <marker date="1489188084319" expanded="true" signature="4734:4770" ph="SELECT * FRO... song" />
             <marker date="1489188084319" expanded="true" signature="5291:5328" ph="SELECT * FRO... album" />
             <marker date="1489188084319" expanded="true" signature="5860:5907" ph="SELECT * FRO... artist" />
@@ -1187,7 +1276,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1197,6 +1288,10 @@
           <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createAlbumTable#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#insert#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#selectAll#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#delete#0;class#AlbumDaoImpl#0" expanded="false" />
             <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
             <marker date="1489031414971" expanded="true" signature="1448:1523" ph="INSERT INTO album... " />
             <marker date="1489031414971" expanded="true" signature="2660:2697" ph="SELECT * FRO... album" />
@@ -1219,16 +1314,25 @@
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
             <element signature="method#delete#0;class#Table#0" expanded="false" />
-            <marker date="1489196808618" expanded="true" signature="1418:1591" ph="CREATE TABLE... IF" />
-            <marker date="1489196808618" expanded="true" signature="2966:3054" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3149:3241" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3814:3825" ph="DROP TABLE m... " />
-            <marker date="1489196808618" expanded="true" signature="4826:4892" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489196808618" expanded="true" signature="6362:6374" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6417" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6418" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6437" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6446" ph="DELETE FROM " />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
+            <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
+            <marker date="1489274660353" expanded="true" signature="1417:1590" ph="CREATE TABLE... IF" />
+            <marker date="1489274660353" expanded="true" signature="2979:3067" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3162:3254" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3827:3838" ph="DROP TABLE m... " />
+            <marker date="1489274660353" expanded="true" signature="5015:5081" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489274660353" expanded="true" signature="5623:5635" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5678" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5679" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5698" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5707" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="6616:6623" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6664" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6665" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6669" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6686" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6687" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6703" ph="UPDATE missi... " />
           </folding>
         </state>
       </provider>
@@ -1258,7 +1362,6 @@
         <state relative-caret-position="1751">
           <caret line="124" column="31" lean-forward="false" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
           <folding>
-            <element signature="e#4355#4363#0" expanded="true" />
             <marker date="1489188084319" expanded="true" signature="4734:4770" ph="SELECT * FRO... song" />
             <marker date="1489188084319" expanded="true" signature="5291:5328" ph="SELECT * FRO... album" />
             <marker date="1489188084319" expanded="true" signature="5860:5907" ph="SELECT * FRO... artist" />
@@ -1281,7 +1384,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1291,6 +1396,10 @@
           <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createAlbumTable#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#insert#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#selectAll#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#delete#0;class#AlbumDaoImpl#0" expanded="false" />
             <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
             <marker date="1489031414971" expanded="true" signature="1448:1523" ph="INSERT INTO album... " />
             <marker date="1489031414971" expanded="true" signature="2660:2697" ph="SELECT * FRO... album" />
@@ -1313,16 +1422,25 @@
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
             <element signature="method#delete#0;class#Table#0" expanded="false" />
-            <marker date="1489196808618" expanded="true" signature="1418:1591" ph="CREATE TABLE... IF" />
-            <marker date="1489196808618" expanded="true" signature="2966:3054" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3149:3241" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3814:3825" ph="DROP TABLE m... " />
-            <marker date="1489196808618" expanded="true" signature="4826:4892" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489196808618" expanded="true" signature="6362:6374" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6417" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6418" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6437" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6446" ph="DELETE FROM " />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
+            <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
+            <marker date="1489274660353" expanded="true" signature="1417:1590" ph="CREATE TABLE... IF" />
+            <marker date="1489274660353" expanded="true" signature="2979:3067" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3162:3254" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3827:3838" ph="DROP TABLE m... " />
+            <marker date="1489274660353" expanded="true" signature="5015:5081" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489274660353" expanded="true" signature="5623:5635" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5678" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5679" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5698" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5707" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="6616:6623" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6664" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6665" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6669" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6686" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6687" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6703" ph="UPDATE missi... " />
           </folding>
         </state>
       </provider>
@@ -1367,7 +1485,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1377,6 +1497,10 @@
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createAlbumTable#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#insert#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#selectAll#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#delete#0;class#AlbumDaoImpl#0" expanded="false" />
             <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
             <marker date="1489031414971" expanded="true" signature="1448:1523" ph="INSERT INTO album... " />
             <marker date="1489031414971" expanded="true" signature="2660:2697" ph="SELECT * FRO... album" />
@@ -1399,16 +1523,25 @@
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
             <element signature="method#delete#0;class#Table#0" expanded="false" />
-            <marker date="1489196808618" expanded="true" signature="1418:1591" ph="CREATE TABLE... IF" />
-            <marker date="1489196808618" expanded="true" signature="2966:3054" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3149:3241" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3814:3825" ph="DROP TABLE m... " />
-            <marker date="1489196808618" expanded="true" signature="4826:4892" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489196808618" expanded="true" signature="6362:6374" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6417" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6418" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6437" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6446" ph="DELETE FROM " />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
+            <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
+            <marker date="1489274660353" expanded="true" signature="1417:1590" ph="CREATE TABLE... IF" />
+            <marker date="1489274660353" expanded="true" signature="2979:3067" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3162:3254" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3827:3838" ph="DROP TABLE m... " />
+            <marker date="1489274660353" expanded="true" signature="5015:5081" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489274660353" expanded="true" signature="5623:5635" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5678" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5679" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5698" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5707" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="6616:6623" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6664" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6665" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6669" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6686" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6687" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6703" ph="UPDATE missi... " />
           </folding>
         </state>
       </provider>
@@ -1435,16 +1568,25 @@
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
             <element signature="method#delete#0;class#Table#0" expanded="false" />
-            <marker date="1489196808618" expanded="true" signature="1418:1591" ph="CREATE TABLE... IF" />
-            <marker date="1489196808618" expanded="true" signature="2966:3054" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3149:3241" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3814:3825" ph="DROP TABLE m... " />
-            <marker date="1489196808618" expanded="true" signature="4826:4892" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489196808618" expanded="true" signature="6362:6374" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6417" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6418" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6437" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6446" ph="DELETE FROM " />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
+            <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
+            <marker date="1489274660353" expanded="true" signature="1417:1590" ph="CREATE TABLE... IF" />
+            <marker date="1489274660353" expanded="true" signature="2979:3067" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3162:3254" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3827:3838" ph="DROP TABLE m... " />
+            <marker date="1489274660353" expanded="true" signature="5015:5081" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489274660353" expanded="true" signature="5623:5635" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5678" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5679" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5698" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5707" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="6616:6623" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6664" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6665" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6669" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6686" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6687" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6703" ph="UPDATE missi... " />
           </folding>
         </state>
       </provider>
@@ -1523,7 +1665,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1536,7 +1677,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1549,22 +1689,48 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/AlbumDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/entities/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="-408">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#4355#4363#0" expanded="true" />
             <marker date="1489188084319" expanded="true" signature="4734:4770" ph="SELECT * FRO... song" />
             <marker date="1489188084319" expanded="true" signature="5291:5328" ph="SELECT * FRO... album" />
             <marker date="1489188084319" expanded="true" signature="5860:5907" ph="SELECT * FRO... artist" />
             <marker date="1489188084319" expanded="true" signature="6481:6555" ph="SELECT * FRO... song" />
             <marker date="1489188084319" expanded="true" signature="7166:7285" ph="SELECT * FRO... song" />
             <marker date="1489188084319" expanded="true" signature="7203:7264" ph="SELECT album... song" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="33" column="21" lean-forward="true" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1577,44 +1743,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dao/AlbumDao.java">
+    <entry file="file://$PROJECT_DIR$/src/com/entities/Artist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/entities/Playlist.java">
+    <entry file="file://$PROJECT_DIR$/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="33" column="42" lean-forward="false" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+        <state relative-caret-position="459">
+          <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="183" column="88" lean-forward="true" selection-start-line="183" selection-start-column="88" selection-end-line="183" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
-            <marker date="1489031414971" expanded="true" signature="1448:1523" ph="INSERT INTO album... " />
-            <marker date="1489031414971" expanded="true" signature="2660:2697" ph="SELECT * FRO... album" />
-            <marker date="1489031414971" expanded="true" signature="4229:4248" ph="SELECT * FRO... album" />
-            <marker date="1489031414971" expanded="true" signature="5622:5657" ph="DELETE FROM " />
-            <marker date="1489031414971" expanded="true" signature="6663:6749" ph="UPDATE album... " />
           </folding>
         </state>
       </provider>
@@ -1632,20 +1774,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.java">
+    <entry file="file://$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="927">
+          <caret line="209" column="13" lean-forward="false" selection-start-line="209" selection-start-column="13" selection-end-line="209" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createAlbumTable#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#insert#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#selectAll#0;class#AlbumDaoImpl#0" expanded="false" />
+            <element signature="method#delete#0;class#AlbumDaoImpl#0" expanded="false" />
+            <marker date="1489031414971" expanded="true" signature="474:639" ph="CREATE TABLE... IF" />
+            <marker date="1489031414971" expanded="true" signature="1448:1523" ph="INSERT INTO album... " />
+            <marker date="1489031414971" expanded="true" signature="2660:2697" ph="SELECT * FRO... album" />
+            <marker date="1489031414971" expanded="true" signature="4229:4248" ph="SELECT * FRO... album" />
+            <marker date="1489031414971" expanded="true" signature="5622:5657" ph="DELETE FROM " />
+            <marker date="1489031414971" expanded="true" signature="6663:6749" ph="UPDATE album... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/util/Table.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="180" column="4" lean-forward="true" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
+        <state relative-caret-position="663">
+          <caret line="245" column="5" lean-forward="true" selection-start-line="245" selection-start-column="5" selection-end-line="245" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doesTableExist#0;class#Table#0" expanded="false" />
@@ -1654,16 +1806,25 @@
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
             <element signature="method#delete#0;class#Table#0" expanded="false" />
-            <marker date="1489196808618" expanded="true" signature="1418:1591" ph="CREATE TABLE... IF" />
-            <marker date="1489196808618" expanded="true" signature="2966:3054" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3149:3241" ph="ALTER TABLE missingValue... " />
-            <marker date="1489196808618" expanded="true" signature="3814:3825" ph="DROP TABLE m... " />
-            <marker date="1489196808618" expanded="true" signature="4826:4892" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489196808618" expanded="true" signature="6362:6374" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6417" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6418" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6437" ph="DELETE FROM " />
-            <marker date="1489196808618" expanded="true" signature="6362:6446" ph="DELETE FROM " />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
+            <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
+            <marker date="1489274660353" expanded="true" signature="1417:1590" ph="CREATE TABLE... IF" />
+            <marker date="1489274660353" expanded="true" signature="2979:3067" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3162:3254" ph="ALTER TABLE missingValue... " />
+            <marker date="1489274660353" expanded="true" signature="3827:3838" ph="DROP TABLE m... " />
+            <marker date="1489274660353" expanded="true" signature="5015:5081" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489274660353" expanded="true" signature="5623:5635" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5678" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5679" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5698" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="5623:5707" ph="DELETE FROM " />
+            <marker date="1489274660353" expanded="true" signature="6616:6623" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6664" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6665" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6669" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6686" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6687" ph="UPDATE missi... " />
+            <marker date="1489274660353" expanded="true" signature="6616:6703" ph="UPDATE missi... " />
           </folding>
         </state>
       </provider>

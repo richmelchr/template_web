@@ -1,6 +1,8 @@
 package com.entities;
 
-public class Artist {
+import com.util.Table;
+
+public class Artist extends Table {
     private int artistID;
     private String artistName;
 
