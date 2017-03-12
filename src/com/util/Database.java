@@ -31,19 +31,19 @@ class Database {
         return connection;
     }
 
-    boolean pushToDB(PreparedStatement statement) {
+    boolean pushToDB(PreparedStatement preStat) {
         Connection connection = null;
         try {
             connection = getConnection();
-            statement.executeUpdate();
+            preStat.executeUpdate();
             return true;
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         } finally {
-            if (statement != null) {
+            if (preStat != null) {
                 try {
-                    statement.close();
+                    preStat.close();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -56,6 +56,26 @@ class Database {
                 }
             }
         }
+    }
+
+    ResultSet getFromDB(PreparedStatement preStat) {
+        Connection connection = null;
+        try {
+            connection = getConnection();
+            return preStat.executeQuery();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
     }
 
     String getDbName() { return dbName; }

@@ -11,22 +11,35 @@ import java.util.Objects;
 
 public class Table extends Database {
 
+    public boolean doesTableExist() {
+        return doesTableExist(this.getClass().getSimpleName().toLowerCase());
+    }
+
     public boolean doesTableExist(String tableName) {
         Connection connection = getConnection();
+        ResultSet rs = null;
         try { // does table already exist?
             DatabaseMetaData md = connection.getMetaData();
-            ResultSet rs = md.getTables(null, null, tableName, null);
+            rs = md.getTables(null, null, tableName, null);
             if (rs.next()) {
                 return true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                rs.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return false;
     }
 
     public boolean createTable() {
-        String fieldName, fieldType, tableName = this.getClass().getSimpleName().toLowerCase();
+        String fieldName, fieldType;
+        String tableName = this.getClass().getSimpleName().toLowerCase();
 
         if (!doesTableExist(tableName)) {
             Connection connection = getConnection();
@@ -34,7 +47,6 @@ public class Table extends Database {
 
             boolean worked, error = true;
             Field[] fields = this.getClass().getDeclaredFields();
-
 
             for (int i = 0; i < fields.length; i++) {
                 fieldName = fields[i].getName();
@@ -69,15 +81,35 @@ public class Table extends Database {
                     return false; // all columns not added
                 }
             }
+            try {
+                connection.close();
+                preStat.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             return true;
         }
+        System.out.println("ERROR: Table does not exist");
         return false;
     }
 
     public boolean addColumn(String colName, boolean colInt, boolean colString) {
+        String tableName = this.getClass().getSimpleName().toLowerCase(); // return name of table
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
+
+        ArrayList<String> columns = getColumns();
+        for (String column : columns) {
+            if (Objects.equals(column, colName)) {
+                System.out.println("ERROR: \n" + colName + "\n already present in " + tableName);
+                return false;
+            }
+        }
+
         Connection connection = getConnection();
         PreparedStatement preStat = null;
-        String tableName = this.getClass().getSimpleName().toLowerCase(); // return name of table
 
         try {
             if (colInt) {
@@ -96,14 +128,93 @@ public class Table extends Database {
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
+        } finally {
+            try {
+                connection.close();
+                preStat.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
-    public boolean dropTable() {
+    public boolean removeColumn(String colName) {
+        String tableName = this.getClass().getSimpleName().toLowerCase(); // return name of table
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
+
+        ArrayList<String> columns = getColumns();
+        for (String column : columns) {
+            if (!Objects.equals(column, colName)) {
+                System.out.println("ERROR: \n" + colName + "\n not present in " + tableName);
+                return false;
+            }
+        }
+
         Connection connection = getConnection();
         PreparedStatement preStat = null;
 
+        try {
+            preStat = connection.prepareStatement("ALTER TABLE " +
+                    tableName + " DROP " + colName);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                preStat.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return pushToDB(preStat);
+    }
+
+    public ArrayList<String> getColumns() {
+        String tableName = this.getClass().getSimpleName().toLowerCase(); // return name of table
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return null;
+        }
+
+        ArrayList<String> columns = new ArrayList<String>();
+        Connection connection = getConnection();
+        PreparedStatement preStat = null;
+        ResultSet rs = null;
+
+        try {
+            preStat = connection.prepareStatement("SELECT * FROM " + tableName);
+            rs = getFromDB(preStat);
+            ResultSetMetaData rsMetaDataM = rs.getMetaData();
+
+            for (int i = 1; i < rsMetaDataM.getColumnCount() + 1; i++) {
+                columns.add(rsMetaDataM.getColumnName(i));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                preStat.close();
+                rs.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return columns;
+    }
+
+    public boolean dropTable() {
         String tableName = this.getClass().getSimpleName().toLowerCase();
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
+        Connection connection = getConnection();
+        PreparedStatement preStat = null;
 
         try {
             preStat = connection.prepareStatement("DROP TABLE " + tableName);
@@ -111,13 +222,25 @@ public class Table extends Database {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
+        } finally {
+            try {
+                connection.close();
+                preStat.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public boolean insert() {
+        String tableName = this.getClass().getSimpleName().toLowerCase();
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
         Connection connection = getConnection();
         PreparedStatement preStat = null;
-        String tableName = this.getClass().getSimpleName().toLowerCase();
+
         Field[] fields = this.getClass().getDeclaredFields();
         StringBuilder columns = new StringBuilder();
         StringBuilder values = new StringBuilder();
@@ -147,14 +270,25 @@ public class Table extends Database {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                preStat.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         return true;
     }
 
     public boolean delete(int id) {
+        String tableName = this.getClass().getSimpleName().toLowerCase();
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
         Connection connection = getConnection();
         PreparedStatement preStat = null;
-        String tableName = this.getClass().getSimpleName().toLowerCase();
 
         try {
             preStat = connection.prepareStatement("DELETE FROM " +
@@ -165,13 +299,25 @@ public class Table extends Database {
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
+        } finally {
+            try {
+                connection.close();
+                preStat.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     public boolean update(int id) {
+        String tableName = this.getClass().getSimpleName().toLowerCase();
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
         Connection connection = getConnection();
         PreparedStatement preStat = null;
-        String tableName = this.getClass().getSimpleName().toLowerCase();
+
         Field[] fields = this.getClass().getDeclaredFields();
         StringBuilder columns = new StringBuilder();
         String pkey = getPrimaryKey();
@@ -191,6 +337,13 @@ public class Table extends Database {
             preStat.setInt(fields.length, id);
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                preStat.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         if (!Objects.equals(null, pkey)) {
             return pushToDB(preStat);
@@ -228,8 +381,14 @@ public class Table extends Database {
     }
 
     public String getPrimaryKey() {
+        String tableName = this.getClass().getSimpleName().toLowerCase();
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return null;
+        }
+        String pkey = null;
         Connection connection = getConnection();
-        String pkey = null, tableName = this.getClass().getSimpleName().toLowerCase();
+
         try {
             DatabaseMetaData md = connection.getMetaData();
             ResultSet rs = md.getPrimaryKeys(null, null, tableName);
@@ -238,6 +397,12 @@ public class Table extends Database {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
         if (pkey == null) {
             System.out.println("ERROR: \"" + tableName + "\" does not have a primary key assigned");

@@ -2,6 +2,7 @@ import com.entities.Album;
 import com.entities.Artist;
 import com.entities.Playlist;
 import com.util.Table;
+import javafx.scene.control.Tab;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.*;
@@ -23,18 +24,16 @@ public class App {
         Playlist playlist = new Playlist(15, "hits");
         Album album = new Album();
         Artist artist = new Artist();
-//        playlist.createTable();
 
-//        playlist.insert();
+        Playlist playlist1 = new Playlist(99, "hits99");
 
-//        playlist.update(3);
+//        playlist.removeColumn("newColumn");
 
-//        System.out.println(album.getPrimaryKey());
+        ArrayList<String> out = playlist.getColumns();
 
-        Playlist playlist1 = new Playlist(2, "more hits");
-
-        playlist1.update(6);
-
+        for (String o : out) {
+            System.out.println(o);
+        }
 
 //        PersonDaoImpl pdi = new PersonDaoImpl();
 //        WriterDaoImpl writer = new WriterDaoImpl();
