@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
-
 public class Table extends Database {
 
     public boolean doesTableExist() {
@@ -287,12 +286,13 @@ public class Table extends Database {
             System.out.println("ERROR: Table does not exist");
             return false;
         }
+        String pkey = getPrimaryKey();
         Connection connection = getConnection();
         PreparedStatement preStat = null;
 
         try {
             preStat = connection.prepareStatement("DELETE FROM " +
-                    tableName + " WHERE " + tableName + "ID" + " = ?");
+                    tableName + " WHERE " + pkey + " = ?");
             preStat.setInt(1, id);
             return pushToDB(preStat);
 
@@ -349,6 +349,81 @@ public class Table extends Database {
             return pushToDB(preStat);
         }
         return false;
+    }
+
+    public Object selectByID(int id) {
+        String tableName = this.getClass().getSimpleName().toLowerCase();
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
+        String pkey = getPrimaryKey();
+        Connection connection = getConnection();
+        PreparedStatement preStat = null;
+        ResultSet resultSet = null;
+
+        Field[] fields = this.getClass().getDeclaredFields();
+        ArrayList<String> columns = getColumns();
+//        Object object = this.getClass().getAnnotatedInterfaces();
+        Object object = new Object();
+
+        try {
+            preStat = connection.prepareStatement("SELECT * FROM " + tableName + " WHERE " + pkey + " = ?");
+            preStat.setInt(1, id);
+            resultSet = getFromDB(preStat);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        // for each column, find a matching field. if they match, check for matching types
+        // then assign the value of the column to the field.
+        try {
+            while (resultSet.next()) {
+                for (int i = 0; i < fields.length; i++) {
+                    for (int j = 0; j < columns.size(); j++) {
+                        if (Objects.equals(fields[i].getName(), columns.get(j))) {
+                            try {
+
+                                if (Objects.equals(fields[i].getGenericType().getTypeName(), "int")) {
+                                    fields[i].set(this, resultSet.getInt(columns.get(j)));
+                                    System.out.println(fields[i].getInt(this));
+
+                                } else if (Objects.equals(fields[i].getGenericType().getTypeName(), "java.lang.String")) {
+                                    fields[i].set(this, resultSet.getString(columns.get(j)));
+                                    System.out.println(fields[i].get(this));
+                                }
+
+                            } catch (SQLException | IllegalAccessException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        // if fields contains a field without a corresponding column, report to user
+        // if columns contains a column without a corresponding field, report to user
+
+
+
+        // if field name of Object matches column name of SQL entry, assign entry value to field
+
+
+
+        // return Object of type called from method
+        // also, get set() methods of object type
+        // to assign to new object and return
+
+
+
+        // finally, close (connection, preStat, resultSet)
+
+        return object;
     }
 
     private PreparedStatement setPreStat(PreparedStatement preStat) {

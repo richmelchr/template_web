@@ -25,15 +25,17 @@ public class App {
         Album album = new Album();
         Artist artist = new Artist();
 
-        Playlist playlist1 = new Playlist(99, "hits99");
+        Playlist playlist1 = new Playlist(12, "soemthing else");
+//        playlist1.insert();
 
-//        playlist.removeColumn("newColumn");
+        playlist.selectByID(5);
 
-        ArrayList<String> out = playlist.getColumns();
 
-        for (String o : out) {
-            System.out.println(o);
-        }
+
+
+
+
+
 
 //        PersonDaoImpl pdi = new PersonDaoImpl();
 //        WriterDaoImpl writer = new WriterDaoImpl();
