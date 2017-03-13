@@ -7,7 +7,6 @@ public class Playlist extends Table {
     public String playlistName;
     public int playlistNumber;
 
-
     public Playlist() {}
 
     public Playlist(int playlistNumber, String playlistName) {
@@ -18,6 +17,7 @@ public class Playlist extends Table {
     public void setPlaylistNumber(int playlistNumber) { this.playlistNumber = playlistNumber;}
     public void setPlaylistName(String playlistName) { this.playlistName = playlistName; }
 
+    public int getPlaylistID() {return playlistID; }
     public int getPlaylistNumber() { return playlistNumber; }
     public String getPlaylistName() { return playlistName; }
 }

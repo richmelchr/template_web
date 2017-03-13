@@ -4,10 +4,8 @@
     <list default="true" id="d8f618eb-fdc9-4ef5-a5c6-0ee459566829" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war/template_web_war.war" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war/template_web_war.war" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/App.class" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/com/util/Database.class" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/com/util/Database.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/com/util/Table.class" afterPath="$PROJECT_DIR$/out/artifacts/template_web_war_exploded/WEB-INF/classes/com/util/Table.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/template_web/App.class" afterPath="$PROJECT_DIR$/out/production/template_web/App.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/template_web/com/util/Database.class" afterPath="$PROJECT_DIR$/out/production/template_web/com/util/Database.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/template_web/com/util/Table.class" afterPath="$PROJECT_DIR$/out/production/template_web/com/util/Table.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.java" afterPath="$PROJECT_DIR$/src/App.java" />
@@ -117,12 +115,12 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="App.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/App.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="340">
-                    <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+                  <state relative-caret-position="357">
+                    <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -133,7 +131,7 @@
             <file leaf-file-name="Database.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="340">
+                  <state relative-caret-position="612">
                     <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
                     <folding>
                       <element signature="imports" expanded="true" />
@@ -199,8 +197,8 @@
           <file leaf-file-name="AlbumDaoImpl.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="109" column="21" lean-forward="true" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+                <state relative-caret-position="340">
+                  <caret line="128" column="36" lean-forward="true" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#createAlbumTable#0;class#AlbumDaoImpl#0" expanded="false" />
@@ -225,8 +223,8 @@
           <file leaf-file-name="Table.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/util/Table.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="335">
-                  <caret line="385" column="30" lean-forward="false" selection-start-line="385" selection-start-column="30" selection-end-line="385" selection-end-column="30" />
+                <state relative-caret-position="663">
+                  <caret line="484" column="0" lean-forward="true" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#doesTableExist#1;class#Table#0" expanded="false" />
@@ -236,29 +234,33 @@
                     <element signature="method#getColumns#0;class#Table#0" expanded="false" />
                     <element signature="method#dropTable#0;class#Table#0" expanded="false" />
                     <element signature="method#insert#0;class#Table#0" expanded="false" />
+                    <element signature="method#delete#0;class#Table#0" expanded="false" />
+                    <element signature="method#update#0;class#Table#0" expanded="false" />
+                    <element signature="method#selectByID#0;class#Table#0" expanded="false" />
+                    <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
                     <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
-                    <marker date="1489358402211" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
-                    <marker date="1489358402211" expanded="true" signature="3998:4086" ph="ALTER TABLE missingValue... " />
-                    <marker date="1489358402211" expanded="true" signature="4181:4273" ph="ALTER TABLE missingValue... " />
-                    <marker date="1489358402211" expanded="true" signature="5516:5571" ph="ALTER TABLE missingValue... " />
-                    <marker date="1489358402211" expanded="true" signature="5516:5582" ph="ALTER TABLE missingValue... " />
-                    <marker date="1489358402211" expanded="true" signature="6432:6446" ph="SELECT * FRO... missingValue" />
-                    <marker date="1489358402211" expanded="true" signature="7447:7458" ph="DROP TABLE m... " />
-                    <marker date="1489358402211" expanded="true" signature="8974:9040" ph="INSERT INTO missingValuemissingValue... " />
-                    <marker date="1489358402211" expanded="true" signature="9959:9971" ph="DELETE FROM " />
-                    <marker date="1489358402211" expanded="true" signature="9959:10014" ph="DELETE FROM " />
-                    <marker date="1489358402211" expanded="true" signature="9959:10015" ph="DELETE FROM " />
-                    <marker date="1489358402211" expanded="true" signature="9959:10019" ph="DELETE FROM " />
-                    <marker date="1489358402211" expanded="true" signature="9959:10025" ph="DELETE FROM " />
-                    <marker date="1489358402211" expanded="true" signature="9959:10031" ph="DELETE FROM " />
-                    <marker date="1489358402211" expanded="true" signature="11279:11286" ph="UPDATE missi... " />
-                    <marker date="1489358402211" expanded="true" signature="11279:11327" ph="UPDATE missi... " />
-                    <marker date="1489358402211" expanded="true" signature="11279:11328" ph="UPDATE missi... " />
-                    <marker date="1489358402211" expanded="true" signature="11279:11332" ph="UPDATE missi... " />
-                    <marker date="1489358402211" expanded="true" signature="11279:11349" ph="UPDATE missi... " />
-                    <marker date="1489358402211" expanded="true" signature="11279:11350" ph="UPDATE missi... " />
-                    <marker date="1489358402211" expanded="true" signature="11279:11366" ph="UPDATE missi... " />
-                    <marker date="1489358402211" expanded="true" signature="12561:12615" ph="SELECT * FRO... missingValue" />
+                    <marker date="1489386275293" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
+                    <marker date="1489386275293" expanded="true" signature="3939:4027" ph="ALTER TABLE missingValue... " />
+                    <marker date="1489386275293" expanded="true" signature="4122:4214" ph="ALTER TABLE missingValue... " />
+                    <marker date="1489386275293" expanded="true" signature="5348:5403" ph="ALTER TABLE missingValue... " />
+                    <marker date="1489386275293" expanded="true" signature="5348:5414" ph="ALTER TABLE missingValue... " />
+                    <marker date="1489386275293" expanded="true" signature="6282:6296" ph="SELECT * FRO... missingValue" />
+                    <marker date="1489386275293" expanded="true" signature="7297:7308" ph="DROP TABLE m... " />
+                    <marker date="1489386275293" expanded="true" signature="8838:8904" ph="INSERT INTO missingValuemissingValue... " />
+                    <marker date="1489386275293" expanded="true" signature="9823:9835" ph="DELETE FROM " />
+                    <marker date="1489386275293" expanded="true" signature="9823:9878" ph="DELETE FROM " />
+                    <marker date="1489386275293" expanded="true" signature="9823:9879" ph="DELETE FROM " />
+                    <marker date="1489386275293" expanded="true" signature="9823:9883" ph="DELETE FROM " />
+                    <marker date="1489386275293" expanded="true" signature="9823:9889" ph="DELETE FROM " />
+                    <marker date="1489386275293" expanded="true" signature="9823:9895" ph="DELETE FROM " />
+                    <marker date="1489386275293" expanded="true" signature="11131:11138" ph="UPDATE missi... " />
+                    <marker date="1489386275293" expanded="true" signature="11131:11179" ph="UPDATE missi... " />
+                    <marker date="1489386275293" expanded="true" signature="11131:11180" ph="UPDATE missi... " />
+                    <marker date="1489386275293" expanded="true" signature="11131:11184" ph="UPDATE missi... " />
+                    <marker date="1489386275293" expanded="true" signature="11131:11201" ph="UPDATE missi... " />
+                    <marker date="1489386275293" expanded="true" signature="11131:11202" ph="UPDATE missi... " />
+                    <marker date="1489386275293" expanded="true" signature="11131:11218" ph="UPDATE missi... " />
+                    <marker date="1489386275293" expanded="true" signature="12247:12301" ph="SELECT * FRO... missingValue" />
                   </folding>
                 </state>
               </provider>
@@ -266,15 +268,15 @@
           </file>
           <file leaf-file-name="ser322.playlist" pinned="false" current-in-tab="false">
             <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.playlist">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
               <provider editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
@@ -300,6 +302,7 @@
       <find>doesTableExist</find>
       <find>results</find>
       <find>id</find>
+      <find>return</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -319,8 +322,8 @@
         <option value="$PROJECT_DIR$/src/com/entities/Artist.java" />
         <option value="$PROJECT_DIR$/src/com/util/Database.java" />
         <option value="$PROJECT_DIR$/src/com/entities/Playlist.java" />
-        <option value="$PROJECT_DIR$/src/App.java" />
         <option value="$PROJECT_DIR$/src/com/util/Table.java" />
+        <option value="$PROJECT_DIR$/src/App.java" />
       </list>
     </option>
   </component>
@@ -364,6 +367,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -481,7 +485,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -1017,7 +1020,10 @@
       <workItem from="1489097751349" duration="21087000" />
       <workItem from="1489167709828" duration="24711000" />
       <workItem from="1489268169199" duration="20318000" />
-      <workItem from="1489345417280" duration="9535000" />
+      <workItem from="1489345417280" duration="10169000" />
+      <workItem from="1489371475409" duration="205000" />
+      <workItem from="1489374473463" duration="5924000" />
+      <workItem from="1489383156818" duration="3144000" />
     </task>
     <task id="LOCAL-00001" summary="nightly commit">
       <created>1488959361495</created>
@@ -1075,11 +1081,18 @@
       <option name="project" value="LOCAL" />
       <updated>1489290357097</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="selectByID() almost complete. assigning aColumn to aField works. still need to return 'this' Objects Fields from method">
+      <created>1489358487008</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1489358487008</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95108000" />
+    <option name="totallyTimeSpent" value="105015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -1107,10 +1120,10 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11941849" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2647975" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06982943" sideWeight="0.49466667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1130064" sideWeight="0.49466667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08795309" sideWeight="0.5053333" order="7" side_tool="true" content_ui="tabs" />
@@ -1119,7 +1132,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1137,7 +1150,8 @@
     <MESSAGE value=".delete(int playlistID) tested, working, finished" />
     <MESSAGE value="update() working, tested, not finished. need to add check for table entry at #id to notify user if update will be unsucessful. also added getPrimaryKey() and setPreStat() finished working, tested, both" />
     <MESSAGE value="finished getColumns() and added method call to affected methods that could benefit. Also closed open SQL DB connection after no longer needed (important step)" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished getColumns() and added method call to affected methods that could benefit. Also closed open SQL DB connection after no longer needed (important step)" />
+    <MESSAGE value="selectByID() almost complete. assigning aColumn to aField works. still need to return 'this' Objects Fields from method" />
+    <option name="LAST_COMMIT_MESSAGE" value="selectByID() almost complete. assigning aColumn to aField works. still need to return 'this' Objects Fields from method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1228,43 +1242,47 @@
             <element signature="method#getColumns#0;class#Table#0" expanded="false" />
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
+            <element signature="method#delete#0;class#Table#0" expanded="false" />
+            <element signature="method#update#0;class#Table#0" expanded="false" />
+            <element signature="method#selectByID#0;class#Table#0" expanded="false" />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
             <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
-            <marker date="1489358402211" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
-            <marker date="1489358402211" expanded="true" signature="3998:4086" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="4181:4273" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5571" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5582" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="6432:6446" ph="SELECT * FRO... missingValue" />
-            <marker date="1489358402211" expanded="true" signature="7447:7458" ph="DROP TABLE m... " />
-            <marker date="1489358402211" expanded="true" signature="8974:9040" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489358402211" expanded="true" signature="9959:9971" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10014" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10015" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10019" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10025" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10031" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="11279:11286" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11327" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11328" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11332" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11349" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11350" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11366" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="12561:12615" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
+            <marker date="1489386275293" expanded="true" signature="3939:4027" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="4122:4214" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5403" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5414" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="6282:6296" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="7297:7308" ph="DROP TABLE m... " />
+            <marker date="1489386275293" expanded="true" signature="8838:8904" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489386275293" expanded="true" signature="9823:9835" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9878" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9879" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9883" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9889" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9895" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="11131:11138" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11179" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11180" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11184" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11201" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11202" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11218" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="12247:12301" ph="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.playlist">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1354,29 +1372,33 @@
             <element signature="method#getColumns#0;class#Table#0" expanded="false" />
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
+            <element signature="method#delete#0;class#Table#0" expanded="false" />
+            <element signature="method#update#0;class#Table#0" expanded="false" />
+            <element signature="method#selectByID#0;class#Table#0" expanded="false" />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
             <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
-            <marker date="1489358402211" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
-            <marker date="1489358402211" expanded="true" signature="3998:4086" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="4181:4273" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5571" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5582" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="6432:6446" ph="SELECT * FRO... missingValue" />
-            <marker date="1489358402211" expanded="true" signature="7447:7458" ph="DROP TABLE m... " />
-            <marker date="1489358402211" expanded="true" signature="8974:9040" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489358402211" expanded="true" signature="9959:9971" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10014" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10015" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10019" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10025" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10031" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="11279:11286" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11327" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11328" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11332" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11349" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11350" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11366" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="12561:12615" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
+            <marker date="1489386275293" expanded="true" signature="3939:4027" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="4122:4214" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5403" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5414" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="6282:6296" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="7297:7308" ph="DROP TABLE m... " />
+            <marker date="1489386275293" expanded="true" signature="8838:8904" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489386275293" expanded="true" signature="9823:9835" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9878" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9879" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9883" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9889" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9895" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="11131:11138" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11179" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11180" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11184" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11201" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11202" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11218" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="12247:12301" ph="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>
@@ -1469,29 +1491,33 @@
             <element signature="method#getColumns#0;class#Table#0" expanded="false" />
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
+            <element signature="method#delete#0;class#Table#0" expanded="false" />
+            <element signature="method#update#0;class#Table#0" expanded="false" />
+            <element signature="method#selectByID#0;class#Table#0" expanded="false" />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
             <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
-            <marker date="1489358402211" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
-            <marker date="1489358402211" expanded="true" signature="3998:4086" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="4181:4273" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5571" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5582" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="6432:6446" ph="SELECT * FRO... missingValue" />
-            <marker date="1489358402211" expanded="true" signature="7447:7458" ph="DROP TABLE m... " />
-            <marker date="1489358402211" expanded="true" signature="8974:9040" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489358402211" expanded="true" signature="9959:9971" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10014" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10015" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10019" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10025" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10031" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="11279:11286" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11327" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11328" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11332" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11349" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11350" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11366" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="12561:12615" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
+            <marker date="1489386275293" expanded="true" signature="3939:4027" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="4122:4214" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5403" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5414" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="6282:6296" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="7297:7308" ph="DROP TABLE m... " />
+            <marker date="1489386275293" expanded="true" signature="8838:8904" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489386275293" expanded="true" signature="9823:9835" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9878" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9879" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9883" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9889" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9895" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="11131:11138" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11179" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11180" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11184" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11201" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11202" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11218" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="12247:12301" ph="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>
@@ -1577,29 +1603,33 @@
             <element signature="method#getColumns#0;class#Table#0" expanded="false" />
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
+            <element signature="method#delete#0;class#Table#0" expanded="false" />
+            <element signature="method#update#0;class#Table#0" expanded="false" />
+            <element signature="method#selectByID#0;class#Table#0" expanded="false" />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
             <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
-            <marker date="1489358402211" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
-            <marker date="1489358402211" expanded="true" signature="3998:4086" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="4181:4273" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5571" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5582" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="6432:6446" ph="SELECT * FRO... missingValue" />
-            <marker date="1489358402211" expanded="true" signature="7447:7458" ph="DROP TABLE m... " />
-            <marker date="1489358402211" expanded="true" signature="8974:9040" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489358402211" expanded="true" signature="9959:9971" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10014" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10015" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10019" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10025" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10031" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="11279:11286" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11327" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11328" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11332" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11349" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11350" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11366" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="12561:12615" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
+            <marker date="1489386275293" expanded="true" signature="3939:4027" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="4122:4214" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5403" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5414" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="6282:6296" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="7297:7308" ph="DROP TABLE m... " />
+            <marker date="1489386275293" expanded="true" signature="8838:8904" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489386275293" expanded="true" signature="9823:9835" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9878" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9879" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9883" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9889" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9895" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="11131:11138" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11179" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11180" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11184" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11201" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11202" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11218" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="12247:12301" ph="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>
@@ -1629,29 +1659,33 @@
             <element signature="method#getColumns#0;class#Table#0" expanded="false" />
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
+            <element signature="method#delete#0;class#Table#0" expanded="false" />
+            <element signature="method#update#0;class#Table#0" expanded="false" />
+            <element signature="method#selectByID#0;class#Table#0" expanded="false" />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
             <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
-            <marker date="1489358402211" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
-            <marker date="1489358402211" expanded="true" signature="3998:4086" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="4181:4273" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5571" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5582" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="6432:6446" ph="SELECT * FRO... missingValue" />
-            <marker date="1489358402211" expanded="true" signature="7447:7458" ph="DROP TABLE m... " />
-            <marker date="1489358402211" expanded="true" signature="8974:9040" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489358402211" expanded="true" signature="9959:9971" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10014" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10015" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10019" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10025" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10031" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="11279:11286" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11327" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11328" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11332" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11349" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11350" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11366" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="12561:12615" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
+            <marker date="1489386275293" expanded="true" signature="3939:4027" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="4122:4214" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5403" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5414" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="6282:6296" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="7297:7308" ph="DROP TABLE m... " />
+            <marker date="1489386275293" expanded="true" signature="8838:8904" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489386275293" expanded="true" signature="9823:9835" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9878" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9879" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9883" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9889" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9895" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="11131:11138" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11179" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11180" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11184" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11201" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11202" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11218" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="12247:12301" ph="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>
@@ -1709,50 +1743,50 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.artist">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.writer">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.song">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.album">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1799,7 +1833,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/util/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="612">
           <caret line="53" column="29" lean-forward="false" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1809,10 +1843,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/entities/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="60" lean-forward="false" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/daoimpl/AlbumDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="109" column="21" lean-forward="true" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+        <state relative-caret-position="340">
+          <caret line="128" column="36" lean-forward="true" selection-start-line="128" selection-start-column="36" selection-end-line="128" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createAlbumTable#0;class#AlbumDaoImpl#0" expanded="false" />
@@ -1829,31 +1871,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/entities/Playlist.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/7719c5b8/c25f8700-32f4-41df-9967-1a38a4542cb0/ser322.playlist">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1862,8 +1896,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/util/Table.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="385" column="30" lean-forward="false" selection-start-line="385" selection-start-column="30" selection-end-line="385" selection-end-column="30" />
+        <state relative-caret-position="663">
+          <caret line="484" column="0" lean-forward="true" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doesTableExist#1;class#Table#0" expanded="false" />
@@ -1873,29 +1907,33 @@
             <element signature="method#getColumns#0;class#Table#0" expanded="false" />
             <element signature="method#dropTable#0;class#Table#0" expanded="false" />
             <element signature="method#insert#0;class#Table#0" expanded="false" />
+            <element signature="method#delete#0;class#Table#0" expanded="false" />
+            <element signature="method#update#0;class#Table#0" expanded="false" />
+            <element signature="method#selectByID#0;class#Table#0" expanded="false" />
+            <element signature="method#setPreStat#0;class#Table#0" expanded="false" />
             <element signature="method#getPrimaryKey#0;class#Table#0" expanded="false" />
-            <marker date="1489358402211" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
-            <marker date="1489358402211" expanded="true" signature="3998:4086" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="4181:4273" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5571" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="5516:5582" ph="ALTER TABLE missingValue... " />
-            <marker date="1489358402211" expanded="true" signature="6432:6446" ph="SELECT * FRO... missingValue" />
-            <marker date="1489358402211" expanded="true" signature="7447:7458" ph="DROP TABLE m... " />
-            <marker date="1489358402211" expanded="true" signature="8974:9040" ph="INSERT INTO missingValuemissingValue... " />
-            <marker date="1489358402211" expanded="true" signature="9959:9971" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10014" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10015" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10019" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10025" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="9959:10031" ph="DELETE FROM " />
-            <marker date="1489358402211" expanded="true" signature="11279:11286" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11327" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11328" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11332" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11349" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11350" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="11279:11366" ph="UPDATE missi... " />
-            <marker date="1489358402211" expanded="true" signature="12561:12615" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="1764:1937" ph="CREATE TABLE... IF" />
+            <marker date="1489386275293" expanded="true" signature="3939:4027" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="4122:4214" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5403" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="5348:5414" ph="ALTER TABLE missingValue... " />
+            <marker date="1489386275293" expanded="true" signature="6282:6296" ph="SELECT * FRO... missingValue" />
+            <marker date="1489386275293" expanded="true" signature="7297:7308" ph="DROP TABLE m... " />
+            <marker date="1489386275293" expanded="true" signature="8838:8904" ph="INSERT INTO missingValuemissingValue... " />
+            <marker date="1489386275293" expanded="true" signature="9823:9835" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9878" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9879" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9883" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9889" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="9823:9895" ph="DELETE FROM " />
+            <marker date="1489386275293" expanded="true" signature="11131:11138" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11179" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11180" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11184" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11201" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11202" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="11131:11218" ph="UPDATE missi... " />
+            <marker date="1489386275293" expanded="true" signature="12247:12301" ph="SELECT * FRO... missingValue" />
           </folding>
         </state>
       </provider>

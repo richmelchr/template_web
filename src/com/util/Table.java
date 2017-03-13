@@ -77,7 +77,6 @@ public class Table extends Database {
                 }
                 if (!error) {
                     System.out.println("not all Column's were added");
-                    return false; // all columns not added
                 }
             }
             try {
@@ -121,8 +120,7 @@ public class Table extends Database {
                 System.out.println("Column type of variable not found for .addColumn");
                 return false;
             }
-
-            return pushToDB(preStat);
+            pushToDB(preStat);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -135,6 +133,7 @@ public class Table extends Database {
                 e.printStackTrace();
             }
         }
+        return true;
     }
 
     public boolean removeColumn(String colName) {
@@ -144,13 +143,8 @@ public class Table extends Database {
             return false;
         }
 
-        ArrayList<String> columns = getColumns();
-        for (String column : columns) {
-            if (!Objects.equals(column, colName)) {
-                System.out.println("ERROR: \n" + colName + "\n not present in " + tableName);
-                return false;
-            }
-        }
+        // consider adding check to make sure colName is a column name in SQL Table before attempt to drop
+        // so as not not encounter a SQLSyntaxErrorException
 
         Connection connection = getConnection();
         PreparedStatement preStat = null;
@@ -158,6 +152,7 @@ public class Table extends Database {
         try {
             preStat = connection.prepareStatement("ALTER TABLE " +
                     tableName + " DROP " + colName);
+            pushToDB(preStat);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -169,7 +164,7 @@ public class Table extends Database {
             }
 
         }
-        return pushToDB(preStat);
+        return true;
     }
 
     public ArrayList<String> getColumns() {
@@ -217,7 +212,7 @@ public class Table extends Database {
 
         try {
             preStat = connection.prepareStatement("DROP TABLE " + tableName);
-            return pushToDB(preStat);
+            pushToDB(preStat);
         } catch (Exception e) {
             e.printStackTrace();
             return false;
@@ -229,6 +224,7 @@ public class Table extends Database {
                 e.printStackTrace();
             }
         }
+        return true;
     }
 
     public boolean insert() {
@@ -294,11 +290,10 @@ public class Table extends Database {
             preStat = connection.prepareStatement("DELETE FROM " +
                     tableName + " WHERE " + pkey + " = ?");
             preStat.setInt(1, id);
-            return pushToDB(preStat);
+            pushToDB(preStat);
 
         } catch (SQLException e) {
             e.printStackTrace();
-            return false;
         } finally {
             try {
                 connection.close();
@@ -307,6 +302,7 @@ public class Table extends Database {
                 e.printStackTrace();
             }
         }
+        return true;
     }
 
     public boolean update(int id) {
@@ -335,6 +331,7 @@ public class Table extends Database {
 
             preStat = setPreStat(preStat);
             preStat.setInt(fields.length, id);
+            pushToDB(preStat);
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -345,13 +342,10 @@ public class Table extends Database {
                 e.printStackTrace();
             }
         }
-        if (!Objects.equals(null, pkey)) {
-            return pushToDB(preStat);
-        }
-        return false;
+        return true;
     }
 
-    public Object selectByID(int id) {
+    public boolean selectByID(int id) {
         String tableName = this.getClass().getSimpleName().toLowerCase();
         if (!doesTableExist(tableName)) {
             System.out.println("ERROR: Table does not exist");
@@ -364,8 +358,6 @@ public class Table extends Database {
 
         Field[] fields = this.getClass().getDeclaredFields();
         ArrayList<String> columns = getColumns();
-//        Object object = this.getClass().getAnnotatedInterfaces();
-        Object object = new Object();
 
         try {
             preStat = connection.prepareStatement("SELECT * FROM " + tableName + " WHERE " + pkey + " = ?");
@@ -375,24 +367,28 @@ public class Table extends Database {
             e.printStackTrace();
         }
 
-
-        // for each column, find a matching field. if they match, check for matching types
-        // then assign the value of the column to the field.
+        // 1: for each column, find a matching field. if they match, check for matching types
+        // 2: then assign the value of the column to the field.
+        // 3: then remove the SQL Column and Object Variable from a list of total columns and variables
         try {
             while (resultSet.next()) {
                 for (int i = 0; i < fields.length; i++) {
                     for (int j = 0; j < columns.size(); j++) {
-                        if (Objects.equals(fields[i].getName(), columns.get(j))) {
+                        if (Objects.equals(fields[i].getName(), columns.get(j))) { // 1
                             try {
+                                String fieldType = fields[i].getGenericType().getTypeName();
 
-                                if (Objects.equals(fields[i].getGenericType().getTypeName(), "int")) {
-                                    fields[i].set(this, resultSet.getInt(columns.get(j)));
-                                    System.out.println(fields[i].getInt(this));
+                                if (Objects.equals(fieldType, "int")) {
+                                    fields[i].set(this, resultSet.getInt(columns.get(j))); // 2
 
-                                } else if (Objects.equals(fields[i].getGenericType().getTypeName(), "java.lang.String")) {
-                                    fields[i].set(this, resultSet.getString(columns.get(j)));
-                                    System.out.println(fields[i].get(this));
+                                } else if (Objects.equals(fieldType, "java.lang.String")) {
+                                    fields[i].set(this, resultSet.getString(columns.get(j))); // 2
+
+                                } else {
+                                    System.out.println("-WARNING- Column type of variable not found");
                                 }
+                                columns.remove(columns.get(j)); // 3
+                                fields[i].setAccessible(true); // 3
 
                             } catch (SQLException | IllegalAccessException e) {
                                 e.printStackTrace();
@@ -403,27 +399,27 @@ public class Table extends Database {
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                assert preStat != null;
+                preStat.close();
+                assert resultSet != null;
+                resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
         }
-
-
-        // if fields contains a field without a corresponding column, report to user
-        // if columns contains a column without a corresponding field, report to user
-
-
-
-        // if field name of Object matches column name of SQL entry, assign entry value to field
-
-
-
-        // return Object of type called from method
-        // also, get set() methods of object type
-        // to assign to new object and return
-
-
-
-        // finally, close (connection, preStat, resultSet)
-
-        return object;
+        for (String column : columns) {
+            System.out.println("-WARNING- This SQL Column did not have a matching Object variable | SQL Column: " + column);
+        }
+        for (Field aField : fields) {
+            if (!aField.isAccessible()) {
+                System.out.println("-WARNING- This Object variable did not have a matching SQL Column | Object Var: " + aField.getName());
+            }
+        }
+        return true;
     }
 
     private PreparedStatement setPreStat(PreparedStatement preStat) {

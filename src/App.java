@@ -25,13 +25,14 @@ public class App {
         Album album = new Album();
         Artist artist = new Artist();
 
-        Playlist playlist1 = new Playlist(12, "soemthing else");
-//        playlist1.insert();
+        Playlist playlist1 = new Playlist();
+//        playlist1.selectByID(5);
 
-        playlist.selectByID(5);
+//        playlist1.addColumn("colTest", true, false);
 
 
 
+//        playlist1.removeColumn("colTest");
 
 
 
