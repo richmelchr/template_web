@@ -1,12 +1,12 @@
 package com.util;
 
+import com.entities.Playlist;
+
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Objects;
+import java.util.*;
 
 public class Table extends Database {
 
@@ -85,10 +85,11 @@ public class Table extends Database {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-            return true;
+        } else {
+            System.out.println("ERROR: Table already exists");
+            return false;
         }
-        System.out.println("ERROR: Table does not exist");
-        return false;
+        return true;
     }
 
     public boolean addColumn(String colName, boolean colInt, boolean colString) {
@@ -101,7 +102,7 @@ public class Table extends Database {
         ArrayList<String> columns = getColumns();
         for (String column : columns) {
             if (Objects.equals(column, colName)) {
-                System.out.println("ERROR: \n" + colName + "\n already present in " + tableName);
+                System.out.println("ERROR: \"" + colName + "\" already present in " + tableName);
                 return false;
             }
         }
@@ -143,8 +144,17 @@ public class Table extends Database {
             return false;
         }
 
-        // consider adding check to make sure colName is a column name in SQL Table before attempt to drop
-        // so as not not encounter a SQLSyntaxErrorException
+        ArrayList<String> columns = getColumns();
+        boolean columnExists = false;
+        for (String column : columns) {
+            if (Objects.equals(column, colName)) {
+                columnExists = true;
+            }
+        }
+        if (!columnExists) {
+            System.out.println("ERROR: \"" + colName + "\" not present in " + tableName);
+            return false;
+        }
 
         Connection connection = getConnection();
         PreparedStatement preStat = null;
@@ -201,8 +211,12 @@ public class Table extends Database {
         return columns;
     }
 
-    public boolean dropTable() {
+    public boolean dropTable(String password) {
         String tableName = this.getClass().getSimpleName().toLowerCase();
+        if (!Objects.equals(password, "gt46u7")) {
+            System.out.println("ERROR: Incorrect Password");
+            return false;
+        }
         if (!doesTableExist(tableName)) {
             System.out.println("ERROR: Table does not exist");
             return false;
@@ -233,6 +247,12 @@ public class Table extends Database {
             System.out.println("ERROR: Table does not exist");
             return false;
         }
+        if (!fieldColumnMatch()) {
+            // consider adding solution to auto add a column if this error is called
+            System.out.println("ERROR: Table does not contain a column for one of your fields, INSERT CANCELED");
+            return false;
+        }
+
         Connection connection = getConnection();
         PreparedStatement preStat = null;
 
@@ -245,6 +265,11 @@ public class Table extends Database {
         values.append(" (");
 
         for (Field aField : fields) {
+            if (Modifier.isPrivate(aField.getModifiers())) {
+                System.out.println("ERROR: " + tableName + " variable \"" + aField.getName() + "\" is Private. This will throw an Exception");
+                return false;
+            }
+
             if (!Objects.equals(aField.getName(), pkey)) {
                 columns.append(aField.getName()).append(",");
                 values.append("?,");
@@ -282,6 +307,12 @@ public class Table extends Database {
             System.out.println("ERROR: Table does not exist");
             return false;
         }
+
+        if (!selectByID(id)) {
+            // error already displayed by selectByID()
+            return false;
+        }
+
         String pkey = getPrimaryKey();
         Connection connection = getConnection();
         PreparedStatement preStat = null;
@@ -311,6 +342,7 @@ public class Table extends Database {
             System.out.println("ERROR: Table does not exist");
             return false;
         }
+
         Connection connection = getConnection();
         PreparedStatement preStat = null;
 
@@ -327,7 +359,7 @@ public class Table extends Database {
 
         try {
             preStat = connection.prepareStatement("UPDATE " + tableName +
-                    " SET " + columns + " WHERE " + pkey + " = ?");
+                    " SET " + columns + "WHERE " + pkey + " = ?");
 
             preStat = setPreStat(preStat);
             preStat.setInt(fields.length, id);
@@ -342,6 +374,10 @@ public class Table extends Database {
                 e.printStackTrace();
             }
         }
+        if (!selectByID(id)) {
+            // error text handled inside selectByID()
+            return false;
+        }
         return true;
     }
 
@@ -355,6 +391,7 @@ public class Table extends Database {
         Connection connection = getConnection();
         PreparedStatement preStat = null;
         ResultSet resultSet = null;
+        boolean resultSetEmpty = true;
 
         Field[] fields = this.getClass().getDeclaredFields();
         ArrayList<String> columns = getColumns();
@@ -367,17 +404,18 @@ public class Table extends Database {
             e.printStackTrace();
         }
 
+        // 0: flag resultSet as containing data
         // 1: for each column, find a matching field. if they match, check for matching types
         // 2: then assign the value of the column to the field.
         // 3: then remove the SQL Column and Object Variable from a list of total columns and variables
         try {
             while (resultSet.next()) {
+                resultSetEmpty = false; // 0
                 for (int i = 0; i < fields.length; i++) {
                     for (int j = 0; j < columns.size(); j++) {
                         if (Objects.equals(fields[i].getName(), columns.get(j))) { // 1
                             try {
                                 String fieldType = fields[i].getGenericType().getTypeName();
-
                                 if (Objects.equals(fieldType, "int")) {
                                     fields[i].set(this, resultSet.getInt(columns.get(j))); // 2
 
@@ -397,6 +435,7 @@ public class Table extends Database {
                     }
                 }
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -411,6 +450,11 @@ public class Table extends Database {
             }
 
         }
+        if (resultSetEmpty) {
+            System.out.println("ERROR: " + tableName + " row #" + id + " does not exist");
+            return false;
+        }
+
         for (String column : columns) {
             System.out.println("-WARNING- This SQL Column did not have a matching Object variable | SQL Column: " + column);
         }
@@ -451,6 +495,37 @@ public class Table extends Database {
         return preStat;
     }
 
+    public boolean fieldColumnMatch() {
+        String tableName = this.getClass().getSimpleName().toLowerCase(); // return name of table
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
+        Field[] fields = this.getClass().getDeclaredFields();
+        ArrayList<String> fieldNames = new ArrayList<String>();
+        ArrayList<String> columns = getColumns();
+        ArrayList<String> matches = new ArrayList<String>();
+
+        for (Field field : fields) { // convert Field to ArrayList
+            fieldNames.add(field.getName());
+        }
+
+        // add matching items to 'matches' ArrayList
+        for (String name:fieldNames) {
+            for (String column:columns) {
+                if (Objects.equals(name, column)) {
+                    matches.add(name);
+                }
+            }
+        }
+        for (String match:matches) {
+            fieldNames.remove(match);
+            columns.remove(match);
+        }
+
+        return (fieldNames.size() == 0);
+    }
+
     public String getPrimaryKey() {
         String tableName = this.getClass().getSimpleName().toLowerCase();
         if (!doesTableExist(tableName)) {
@@ -480,5 +555,74 @@ public class Table extends Database {
         }
         return pkey;
     }
+
+    /*
+    public boolean selectAll(List newList) {
+        String tableName = this.getClass().getSimpleName().toLowerCase();
+        if (!doesTableExist(tableName)) {
+            System.out.println("ERROR: Table does not exist");
+            return false;
+        }
+        Field[] fields = this.getClass().getDeclaredFields();
+        ArrayList<String> columns = getColumns();
+
+        Connection connection = getConnection();
+        PreparedStatement preStat = null;
+        ResultSet resultSet = null;
+
+        try {
+            preStat = connection.prepareStatement("SELECT * FROM " + tableName);
+            resultSet = getFromDB(preStat);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        try {
+            while (resultSet.next()) {
+
+
+                for (int i = 0; i < fields.length; i++) {
+                    for (int j = 0; j < columns.size(); j++) {
+                        if (Objects.equals(fields[i].getName(), columns.get(j))) { // 1
+                            try {
+                                String fieldType = fields[i].getGenericType().getTypeName();
+                                if (Objects.equals(fieldType, "int")) {
+                                    fields[i].set(this, resultSet.getInt(columns.get(j))); // 2
+
+                                } else if (Objects.equals(fieldType, "java.lang.String")) {
+                                    fields[i].set(this, resultSet.getString(columns.get(j))); // 2
+
+                                }
+
+
+
+                            } catch (SQLException | IllegalAccessException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+                preStat.close();
+                resultSet.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+
+        return true;
+    }
+    */
 
 }

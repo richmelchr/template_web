@@ -8,6 +8,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.*;
 import java.lang.Class;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 public class App {
 
@@ -20,19 +22,47 @@ public class App {
 
 //        Table.insert(album);
 
+        Playlist playlist = new Playlist();
+        Playlist playlist1 = new Playlist(1, "1", 1);
+        Playlist playlist2 = new Playlist(22, "22", 22);
+        Playlist playlist3 = new Playlist(333, "333", 333);
 
-        Playlist playlist = new Playlist(15, "hits");
-        Album album = new Album();
-        Artist artist = new Artist();
 
-        Playlist playlist1 = new Playlist();
+
+
 //        playlist1.selectByID(5);
 
 //        playlist1.addColumn("colTest", true, false);
 
+//        playlist1.selectByID(9);
+
+//        for (Objects play: newList) {
+//            Playlist newPlay = new Playlist();
+//            Field[] fields = play.getClass().getClass().getDeclaredFields();
+//            System.out.println(fields[1].getName());
+//            System.out.println(fields[2].getName());
+//            System.out.println(fields[3].getName());
+//
+//            playlist1.getPlaylistName();
+//        }
 
 
-//        playlist1.removeColumn("colTest");
+//        System.out.println(playlist4.update(15));
+
+//        playlist1.dropTable("gt46u7");
+
+
+
+
+
+
+
+
+//        playlist.fieldColumnMatch();
+
+
+
+
 
 
 
